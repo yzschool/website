@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title>Candidate information</title>
+
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+
+</head>
+
+<body>
+    <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>gender</th>
+                <th>dateofbirth</th>
+                <th>schoolname</th>
+                <th>department</th>
+                <th>major</th>
+                <th>age</th>
+                <th>workexperience</th>
+                <th>positionapplied</th>
+                <th>telephone</th>
+                <th>residence</th>
+                <th>selfintroduce</th>
+                <th>jobdecription</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>name</th>
+                <th>gender</th>
+                <th>dateofbirth</th>
+                <th>schoolname</th>
+                <th>department</th>
+                <th>major</th>
+                <th>age</th>
+                <th>workexperience</th>
+                <th>positionapplied</th>
+                <th>telephone</th>
+                <th>residence</th>
+                <th>selfintroduce</th>
+                <th>jobdecription</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable({
+                ajax: {
+                    url: 'http://www.yzschool.com.cn/recruit/getallexamtable',
+                },
+                columns: [
+                    { data: 'name' },
+                    { data: 'gender' },
+                    { data: 'dateofbirth' },
+                    { data: 'schoolname' },
+                    { data: 'department' },
+                    { data: 'major' },
+                    { data: 'age' },
+                    { data: 'workexperience' },
+                    { data: 'positionapplied' },
+                    { data: 'telephone' },
+                    { data: 'residence' },
+                    { data: 'selfintroduce' },
+                    { data: 'jobdecription' }
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>
